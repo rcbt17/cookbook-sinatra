@@ -1,0 +1,31 @@
+<h2 class="my-3"> Please enter Recipe's details </h2>
+<hr>
+<form method="POST" class="my-2">
+  <div class="form-group">
+    <label for="name">Recipe Name</label>
+    <input type="text" class="form-control" id="name" name="name"  placeholder="Enter Recipe's Name" required>
+  </div>
+  <div class="form-group">
+    <label for="name">Description</label>
+    <textarea class="form-control" id="description" name="description" rows="4" placeholder="Maybe start with the onions" required></textarea>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="name">Personal Rating</label>
+        <input type="text" class="form-control" id="rating" name="rating"  placeholder="Personal Rating" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="name">Preparation Time</label>
+        <input type="text" class="form-control" id="prep_time" name="prep_time"  placeholder="In HH:MM format" required >
+      </div>
+    </div>
+  </div>
+  <div class="form-check my-3">
+    <input type="checkbox" class="form-check-input" name="done" id="done">
+    <label class="form-check-label" for="done">I've cooked this recipe</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Add recipe</button>
+</form>

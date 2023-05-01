@@ -1,0 +1,19 @@
+<h2 class="my-5">Select Recipe to Import</h2>
+<hr>
+<% if @recipes.count.positive?%>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <div class="card my-3">
+      <div class="card-header">
+        <%= recipe.name %> <a href="/add/<%= "#{recipe.name}/#{Base64.encode64(recipe.url)}" %>" class="btn btn-sm btn-info">Add Recipe</a>
+      </div>
+
+
+
+    </div>
+  <% end %>
+<% else %>
+  <h4>Sorry, you have no recipes added yet!
+  <% end %>
+  <hr>
+  <a class="btn btn-primary text-white" href="/new">Add new</a>
+  <a class="btn btn-dark text-white" href="/import">Import from web</a>
